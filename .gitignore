@@ -92,7 +92,7 @@ BO/BOYofi.iml
 BO/*.iml
 /.idea/*
 TestRun.log
-
+/.allure/*
 
 ## iOS
 #########################
