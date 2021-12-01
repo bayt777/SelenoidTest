@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Advice tests" verbose="3">
+
+    <listeners>
+<!--        <listener class-name="SuiteListener"/>-->
+    </listeners>
+
+    <test name="Tests">
+        <classes>
+            <class name="google.DockerTest"/>
+            <class name="google.DownloadTest"/>
+            <class name="google.YTreeSiteTest"/>
+            <class name="google.SearchTest"/>
+        </classes>
+    </test>
+</suite>

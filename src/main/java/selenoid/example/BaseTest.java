@@ -1,18 +1,16 @@
 package selenoid.example;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeEach;
+import com.codeborne.selenide.logevents.EventsCollector;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.net.MalformedURLException;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
-    @BeforeEach
-    void setUp() throws MalformedURLException {
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-//                .screenshots(true)
-//                .savePageSource(true));
+    @BeforeTest
+    void setUp() {
+        SelenideLogger.addListener("simpleReport", new EventsCollector());
 //
 //        DesiredCapabilities capabilities = new DesiredCapabilities();
 //        capabilities.setCapability("browserName", "chrome");

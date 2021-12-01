@@ -1,6 +1,6 @@
 package google;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import selenoid.example.BaseTest;
 
 import java.io.File;

@@ -13,7 +13,7 @@ public class GoogleSearchPage {
     }
 
     public ElementsCollection results() {
-        return $$("#ires li.g");
+        return $$("#res .g");
     }
 
 }
