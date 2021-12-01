@@ -25,7 +25,6 @@ pipeline {
             steps {
                     sh "git checkout master"
                     sh "git config --global credential.helper store"
-                    sh "jx step git credentials"
                     sh "mvn clean test -Dsuite=${params.TestSuite}"
             }
             post {
