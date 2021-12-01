@@ -2,7 +2,7 @@
 
 pipeline {
     agent {
-        label "jenkins-maven-java11"
+        label "master"
     }
     triggers {
         cron('00 5 * * 1-5')
