@@ -33,36 +33,7 @@ pipeline {
                         step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
                     }
                 }
-//                 success {
-//                     slackSend message: "Build finished :tada:" +
-//                             "\n BO UI/API AUTOTESTS - Auto Test Run (<${env.TEST_RESULT.readLines().get(2)}|Open>)" +
-//                             "\n Test Suite - ${params.TestSuite}" +
-//                             "\n ${env.TEST_RESULT.readLines().get(0)}" +
-//                             "\n ${env.TEST_RESULT.readLines().get(1)}" +
-//                             "\n (<${env.BUILD_URL}testngreports/|Open report>)",
-//                             color: "good",
-//                             channel: "dev-qa-autotests"
-//                 }
-//                 failure {
-//                     slackSend message: "FAILED!!! :no_entry:" +
-//                             "\n BO UI/API AUTOTESTS - Auto Test Run (<${env.TEST_RESULT.readLines().get(2)}|Open>)" +
-//                             "\n Test Suite - ${params.TestSuite}" +
-//                             "\n ${env.TEST_RESULT.readLines().get(0)}" +
-//                             "\n ${env.TEST_RESULT.readLines().get(1)}" +
-//                             "\n (<${env.BUILD_URL}testngreports/|Open report>)",
-//                             color: "danger",
-//                             channel: "dev-qa-autotests"
-//                 }
-//                 unstable {
-//                     slackSend message: "Build finished :man-shrugging:" +
-//                             "\n BO UI/API AUTOTESTS - Auto Test Run (<${env.TEST_RESULT.readLines().get(2)}|Open>)" +
-//                             "\n Test Suite - ${params.TestSuite}" +
-//                             "\n ${env.TEST_RESULT.readLines().get(0)}" +
-//                             "\n ${env.TEST_RESULT.readLines().get(1)}" +
-//                             "\n (<${env.BUILD_URL}testngreports/|Open report>)",
-//                             color: "warning",
-//                             channel: "dev-qa-autotests"
-//                 }
+
                 cleanup {
                     cleanWs()
                 }
